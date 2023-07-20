@@ -1,0 +1,290 @@
+[
+    {
+        "time": 0,
+        "part": "1 Excuse me! 打扰一下！"
+    },
+    {
+        "time": 26,
+        "part": "3 Sorry, sir. 对不起，先生。"
+    },
+    {
+        "time": 69,
+        "part": "5 Nice to meet you. 很高兴见到你。"
+    },
+    {
+        "time": 132,
+        "part": "7 Are you a teacher? 你是教师吗？"
+    },
+    {
+        "time": 186,
+        "part": "9 How are you today? 你今天好吗？"
+    },
+    {
+        "time": 228,
+        "part": "11 Is this your shirt? 这是你的衬衫吗？"
+    },
+    {
+        "time": 273,
+        "part": "13 A new dress 一件新连衣裙"
+    },
+    {
+        "time": 315,
+        "part": "15 Your passports, please. 请出示你们的护照。"
+    },
+    {
+        "time": 376,
+        "part": "17 How do you do? 你好！"
+    },
+    {
+        "time": 442,
+        "part": "19 Tired and thirsty 又累又渴"
+    },
+    {
+        "time": 493,
+        "part": "21 Which book? 哪一本书？"
+    },
+    {
+        "time": 521,
+        "part": "23 Which lasses? 哪几只杯子？"
+    },
+    {
+        "time": 552,
+        "part": "25 Mrs. Smith's kitchen 史密斯太太的厨房"
+    },
+    {
+        "time": 607,
+        "part": "27 Mr. Smith's living room  史密斯太太的客厅"
+    },
+    {
+        "time": 672,
+        "part": "29 Come in, Amy. 进来，艾米。"
+    },
+    {
+        "time": 712,
+        "part": "31 Where's Sally? 萨莉在哪里？"
+    },
+    {
+        "time": 762,
+        "part": "33 A fine day 晴天"
+    },
+    {
+        "time": 814,
+        "part": "35 Our village 我们的村庄"
+    },
+    {
+        "time": 881,
+        "part": "37 Making a bookcase 做书架"
+    },
+    {
+        "time": 941,
+        "part": "39 Don't drop it! 别摔了！"
+    },
+    {
+        "time": 994,
+        "part": "41 Penny's bag 彭妮的提包"
+    },
+    {
+        "time": 1050,
+        "part": "43 Hurry up! 快点！"
+    },
+    {
+        "time": 1115,
+        "part": "45 The boss's letter 老板的信"
+    },
+    {
+        "time": 1175,
+        "part": "47 A cup of coffee 一杯咖啡"
+    },
+    {
+        "time": 1226,
+        "part": "49 At the butcher's 在肉店"
+    },
+    {
+        "time": 1293,
+        "part": "51 A pleasant climate 宜人的气候"
+    },
+    {
+        "time": 1372,
+        "part": "53 An interesting climate 有趣的气候"
+    },
+    {
+        "time": 1455,
+        "part": "55 The Sawyer family 索耶一家人"
+    },
+    {
+        "time": 1532,
+        "part": "57 An unusual day 很不平常的一天"
+    },
+    {
+        "time": 1617,
+        "part": "59 Is that all? 就这些吗？"
+    },
+    {
+        "time": 1688,
+        "part": "61 A bad cold 重感冒"
+    },
+    {
+        "time": 1757,
+        "part": "63 Thank you, doctor. 谢谢你，医生。"
+    },
+    {
+        "time": 1845,
+        "part": "65 Not a baby 不是一个孩子"
+    },
+    {
+        "time": 1930,
+        "part": "67 The weekend 周末"
+    },
+    {
+        "time": 2004,
+        "part": "69 The car race 汽车比赛"
+    },
+    {
+        "time": 2093,
+        "part": "71 He's awful! 他讨厌透了！"
+    },
+    {
+        "time": 2188,
+        "part": "73 The way to King Street 到国王街的走法"
+    },
+    {
+        "time": 2268,
+        "part": "75 Uncomfortable shoes 不舒适的鞋子"
+    },
+    {
+        "time": 2349,
+        "part": "77 Terrible toothache 要命的牙痛"
+    },
+    {
+        "time": 2432,
+        "part": "79 Carol's shopping list 卡罗尔的购物清单"
+    },
+    {
+        "time": 2518,
+        "part": "81 Roast beef and potatoes 烤牛肉和土豆"
+    },
+    {
+        "time": 2594,
+        "part": "83 Going on holiday 度假"
+    },
+    {
+        "time": 2683,
+        "part": "85 Paris in the spring 巴黎之春"
+    },
+    {
+        "time": 2751,
+        "part": "87 A car rush 车祸"
+    },
+    {
+        "time": 2826,
+        "part": "89 For sale 待售"
+    },
+    {
+        "time": 2910,
+        "part": "91 Poor Ian! 可怜的伊恩！"
+    },
+    {
+        "time": 3002,
+        "part": "93 Our new neighbor 我们的新邻居"
+    },
+    {
+        "time": 3064,
+        "part": "95 Tickets, please 请把车票拿出来。"
+    },
+    {
+        "time": 3146,
+        "part": "97 A small blue case 一只蓝色的小箱子"
+    },
+    {
+        "time": 3228,
+        "part": "99 Ow! 哎呦！"
+    },
+    {
+        "time": 3290,
+        "part": "101 A card from Jimmy 吉米的明信片"
+    },
+    {
+        "time": 3383,
+        "part": "103 The French test 法语考试"
+    },
+    {
+        "time": 3471,
+        "part": "105 Full of mistakes 错误百出"
+    },
+    {
+        "time": 3555,
+        "part": "107 It's too small. 太小了"
+    },
+    {
+        "time": 3642,
+        "part": "109 A good idea 好主意"
+    },
+    {
+        "time": 3729,
+        "part": "111 The most expensive model 最昂贵的型号"
+    },
+    {
+        "time": 3829,
+        "part": "113 Small change 零钱"
+    },
+    {
+        "time": 3908,
+        "part": "115 Knock, knock! 敲敲门！"
+    },
+    {
+        "time": 3995,
+        "part": "117 Tommy's breakfast 汤米的早餐"
+    },
+    {
+        "time": 4077,
+        "part": "119 A true story 一个真实的故事"
+    },
+    {
+        "time": 4173,
+        "part": "121 The man in a hat 戴帽子的男士"
+    },
+    {
+        "time": 4245,
+        "part": "123 A trip to Australia 澳大利亚之行"
+    },
+    {
+        "time": 4321,
+        "part": "125 Tea for two 两个人一起喝茶"
+    },
+    {
+        "time": 4394,
+        "part": "127 A famous actress 著名的女演员"
+    },
+    {
+        "time": 4485,
+        "part": "129 Seventy miles an hour 时速70英里"
+    },
+    {
+        "time": 4578,
+        "part": "131 Don't be so sure! 别那么肯定！"
+    },
+    {
+        "time": 4660,
+        "part": "133 Sensational news! 爆炸性新闻！"
+    },
+    {
+        "time": 4755,
+        "part": "135 The latest report 最新消息"
+    },
+    {
+        "time": 4864,
+        "part": "137 A pleasant dream 美好的梦"
+    },
+    {
+        "time": 4956,
+        "part": "139 Is that you, John? 是你吗，约翰？"
+    },
+    {
+        "time": 5050,
+        "part": "141 Sally's first train ride 萨莉第一次乘火车旅行"
+    },
+    {
+        "time": 5161,
+        "part": "143 A walk through the woods 在树林中散步"
+    }
+]
