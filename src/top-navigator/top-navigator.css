@@ -1,0 +1,32 @@
+.top-navbar {
+    width: calc(100% - 305px);
+    height: 50px;
+    vertical-align: middle;
+    border-bottom: 1px solid black;
+}
+
+.top-navbar-tab {
+    font-size: 25px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.top-navbar-tab.selected {
+    text-shadow: 0 0 2px black;
+    background-color: gainsboro;
+}
+
+.top-navbar-tab:hover {
+    cursor: pointer;
+    text-shadow: 0 0 2px black;
+    background-color: lightgrey;
+}
+
+.top-navbar-course-selector {
+    margin-left: auto;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    text-shadow: 0 0 2px black;
+}

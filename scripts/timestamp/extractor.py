@@ -1,5 +1,6 @@
-# copy the timestamp string on Youtube into raw_timestamps.txt (the existing file is just a sample)
-# this file will process it and output it into arrays of strings in timestamps.json
+# copy the timestamp string on Youtube into raw_timestamps folder as txt files (the existing files are just a sample)
+# please name the files the same name as the mp4 videos to be played, so they can be matched up
+# this file will process the folder and output it into timestamps.json
 
 import json
 import os
@@ -25,24 +26,31 @@ def str_to_seconds(label: str) -> int:
         ftr = [86400, 3600, 60, 1]
     return sum([a*b for a,b in zip(ftr, map(int, label.split(':')))])
 
-raw_file = open("raw_timestamps.txt", "r")
-timestamps = []
+raw_timestamps_dir = "raw_timestamps"
+entries = os.listdir(raw_timestamps_dir)
 
-for row in raw_file:
-    row = row.strip()
-    if row == '':
-        continue
-    if row.find(' ') == -1:
-        raise ValueError("A timestamp row does not contain a space: {}".format(row))
-    parts = row.split(" ", 1)
-    timestamp = dict()
-    timestamp["time"] = str_to_seconds(parts[0].strip())
-    timestamp["part"] =  parts[1].strip()
-    timestamps.append(timestamp)
+timestamps_map = dict()
 
-raw_file.close()
+for entry in entries:
+    raw_file = open(os.path.join(raw_timestamps_dir, entry), "r")
+    timestamps = []
+
+    for row in raw_file:
+        row = row.strip()
+        if row == '':
+            continue
+        if row.find(' ') == -1:
+            raise ValueError("A timestamp row does not contain a space: {}".format(row))
+        parts = row.split(" ", 1)
+        timestamp = dict()
+        timestamp["time"] = str_to_seconds(parts[0].strip())
+        timestamp["part"] =  parts[1].strip()
+        timestamps.append(timestamp)
+
+    raw_file.close()
+    timestamps_map[entry[:entry.rfind(".")]] = timestamps
 
 processed_file = open(os.path.join("..", "..", "src", "data", "timestamps.json"), "w")
-json.dump(timestamps, processed_file, ensure_ascii=False, indent=4)
+json.dump(timestamps_map, processed_file, ensure_ascii=False, indent=4)
 
 processed_file.close()

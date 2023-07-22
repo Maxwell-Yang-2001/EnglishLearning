@@ -10,14 +10,15 @@
 }
 
 #lesson-selector > div {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 25px;
+  text-shadow: 0 0 2px black;
   position: sticky;
   top: 0;
   width: calc(100% - 10px);
   background-color: white;
   padding: 5px;
   border-bottom: 1px solid black;
+  height: 50px;
 }
 
 #lesson-selector > p {

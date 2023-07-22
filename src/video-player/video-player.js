@@ -1,7 +1,7 @@
 import React from "react";
 import "./video-player.css";
 import { connect } from "react-redux";
-import { setTime, setLesson } from "../redux/action";
+import { setTime, setLessonAndTime } from "../redux/action";
 
 class VideoPlayer extends React.Component {
   constructor(props) {
@@ -40,23 +40,28 @@ class VideoPlayer extends React.Component {
         ) {
           lesson++;
         }
-        while (lesson > 0 && this.props.timestamps[lesson].time > this.currentTime) {
+        while (
+          lesson > 0 &&
+          this.props.timestamps[lesson].time > this.currentTime
+        ) {
           lesson--;
         }
         if (this.props.lesson !== lesson) {
-          this.props.setLesson(lesson);
-          this.props.setTime(this.currentTime);
+          this.props.setLessonAndTime(lesson, this.currentTime);
         }
       }
     }, 100);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate({ course }) {
     if (this.currentTime !== this.props.time) {
       this.currentTime = this.props.time;
       if (this.playerRef.current?.currentTime) {
         this.playerRef.current.currentTime = this.props.time;
       }
+    }
+    if (course !== this.props.course && this.playerRef.current) {
+      this.playerRef.current.load();
     }
   }
 
@@ -68,25 +73,28 @@ class VideoPlayer extends React.Component {
 
   render() {
     return (
-      <video id="video-player" controls ref={this.playerRef} autoFocus>
-        <source
-          src={`videos/concept1.mp4#t=${this.props.time}`}
-          type="video/mp4"
-        />
-      </video>
+      <div className="video-container d-flex align-items-center">
+        <video className="video-player" controls ref={this.playerRef} autoFocus>
+          <source
+            src={`videos/${this.props.course}.mp4#t=${this.props.time}`}
+            type="video/mp4"
+          />
+        </video>
+      </div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
   time: state.time,
-  timestamps: state.timestamps,
+  timestamps: state.timestampsMap[state.course],
   lesson: state.lesson,
+  course: state.course,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   setTime: (time) => dispatch(setTime(time)),
-  setLesson: (lesson) => dispatch(setLesson(lesson)),
+  setLessonAndTime: (lesson, time) => dispatch(setLessonAndTime(lesson, time)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(VideoPlayer);
