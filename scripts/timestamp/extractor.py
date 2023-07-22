@@ -2,6 +2,7 @@
 # this file will process it and output it into arrays of strings in timestamps.json
 
 import json
+import os
 
 class Timestamp:
     def __init__(self, time: int, label: str):
@@ -41,7 +42,7 @@ for row in raw_file:
 
 raw_file.close()
 
-processed_file = open("timestamps.json", "w")
+processed_file = open(os.path.join("..", "..", "src", "data", "timestamps.json"), "w")
 json.dump(timestamps, processed_file, ensure_ascii=False, indent=4)
 
 processed_file.close()

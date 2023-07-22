@@ -1,45 +1,92 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./video-player.css";
+import { connect } from "react-redux";
+import { setTime, setLesson } from "../redux/action";
 
-export const VideoPlayer = () => {
-  let player,
-    currentTime = 0;
+class VideoPlayer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.currentTime = props.time;
+    this.playerRef = React.createRef();
+  }
 
-  // relative seek +/- 10s
-  const handler = (e) => {
-    e.preventDefault();
-    if (e.key === "ArrowLeft") {
-      player.currentTime = currentTime - 10;
-    } else if (e.key === "ArrowRight") {
-      player.currentTime = currentTime + 10;
-    }
-  };
+  componentDidMount() {
+    // relative seek +/- 10s and pause/play
+    this.handler = (e) => {
+      if (e.key === "ArrowLeft") {
+        if (this.playerRef.current?.currentTime) {
+          this.playerRef.current.currentTime = this.currentTime - 10;
+        }
+      } else if (e.key === "ArrowRight") {
+        if (this.playerRef.current?.currentTime) {
+          this.playerRef.current.currentTime = this.currentTime + 10;
+        }
+      } else if (e.key === " ") {
+        e.preventDefault();
+      }
+    };
 
-  const ref = (ref) => {
-    player = ref;
-  };
+    window.addEventListener("keydown", this.handler, false);
 
-  useEffect(() => {
-    window.addEventListener("keydown", handler, false);
-    return () => window.removeEventListener("keydown", handler, false);
-  }, []);
-
-  // HACK: every 100 ms (assumed to be fast enough for spamming left or right)
-  // get the current time of the player so relative seeks can be calculated
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (player) {
-        currentTime = player.currentTime;
+    // HACK: every 100 ms (assumed to be fast enough for spamming left or right)
+    // get the current time of the player so relative seeks can be calculated
+    this.interval = setInterval(() => {
+      if (this.playerRef.current?.currentTime) {
+        this.currentTime = this.playerRef.current.currentTime;
+        let lesson = this.props.lesson;
+        while (
+          this.props.timestamps.length > lesson + 1 &&
+          this.props.timestamps[lesson + 1].time <= this.currentTime
+        ) {
+          lesson++;
+        }
+        while (lesson > 0 && this.props.timestamps[lesson].time > this.currentTime) {
+          lesson--;
+        }
+        if (this.props.lesson !== lesson) {
+          this.props.setLesson(lesson);
+          this.props.setTime(this.currentTime);
+        }
       }
     }, 100);
-    return () => clearInterval(interval);
-  }, []);
+  }
 
-  return (
-    <div className="player-page-wrapper">
-      <video id="video-player" controls ref={ref}>
-        <source src="videos/concept1.mp4" type="video/mp4" />
+  componentDidUpdate() {
+    if (this.currentTime !== this.props.time) {
+      this.currentTime = this.props.time;
+      if (this.playerRef.current?.currentTime) {
+        this.playerRef.current.currentTime = this.props.time;
+      }
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this.handler, false);
+    clearInterval(this.interval);
+    this.props.setTime(this.playerRef.current.currentTime);
+  }
+
+  render() {
+    return (
+      <video id="video-player" controls ref={this.playerRef} autoFocus>
+        <source
+          src={`videos/concept1.mp4#t=${this.props.time}`}
+          type="video/mp4"
+        />
       </video>
-    </div>
-  );
-};
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  time: state.time,
+  timestamps: state.timestamps,
+  lesson: state.lesson,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setTime: (time) => dispatch(setTime(time)),
+  setLesson: (lesson) => dispatch(setLesson(lesson)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(VideoPlayer);

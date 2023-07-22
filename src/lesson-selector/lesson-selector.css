@@ -1,0 +1,42 @@
+#lesson-selector {
+  width: 300px;
+  height: 100%;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 5px;
+  border-left: 1px solid black;
+}
+
+#lesson-selector > div {
+  font-size: 30px;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  width: calc(100% - 10px);
+  background-color: white;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+#lesson-selector > p {
+  margin: 0;
+  max-width: calc(100% - 10px);
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#lesson-selector > p.selected {
+  text-shadow: 0 0 1px black;
+  background-color: gainsboro;
+}
+
+#lesson-selector > p:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
