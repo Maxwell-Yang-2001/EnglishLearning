@@ -21,6 +21,7 @@ const TopNavigator = ({ tab, setTab, course, courses, setCourse }) => {
           {tabTitle}
         </span>
       ))}
+      <a className="top-navbar-pdf" target="_blank" href={`/pdfs/${course}.pdf`}>PDF</a>
       <select
         className="top-navbar-course-selector"
         value={course}

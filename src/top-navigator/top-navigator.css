@@ -23,10 +23,27 @@
     background-color: lightgrey;
 }
 
-.top-navbar-course-selector {
+.top-navbar-pdf {
     margin-left: auto;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.top-navbar-pdf:hover {
+    cursor: pointer;
+    text-shadow: 0 0 2px black;
+    text-decoration: underline;
+}
+
+.top-navbar-course-selector {
+    margin-left: 10px;
     font-size: 25px;
     outline: none;
     border: none;
     text-shadow: 0 0 2px black;
+}
+
+.top-navbar-course-selector:hover {
+    cursor: pointer;
 }
