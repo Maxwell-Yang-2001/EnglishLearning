@@ -14,6 +14,7 @@ const LessonSelector = ({ timestamps, lesson, setLessonAndTime }) => {
       {timestamps.map(({ time, part }, index) => (
         <p
           key={`lesson-${index}`}
+          title={part}
           className={lesson === index ? "selected" : ""}
           onClick={() => {
             if (lesson !== index) {
