@@ -1,7 +1,13 @@
-.player-page-wrapper {
-    padding: 30px;
+.video-container {
+    width: calc(100% - 305px);
+    height: calc(100vh - 50px);
+    align-items: center;
+    justify-content: center;
 }
-
-video {
-    border-radius: 10px;
+.video-player {
+  width: calc(min(100vw - 400px, (100vh - 100px) * 16 / 9));
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  display: flex;
 }

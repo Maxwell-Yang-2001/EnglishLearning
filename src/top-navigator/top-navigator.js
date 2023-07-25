@@ -21,7 +21,14 @@ const TopNavigator = ({ tab, setTab, course, courses, setCourse }) => {
           {tabTitle}
         </span>
       ))}
-      <a className="top-navbar-pdf" target="_blank" href={`/pdfs/${course}.pdf`}>PDF</a>
+      <a
+        className="top-navbar-pdf"
+        target="_blank"
+        rel="noreferrer"
+        href={`./pdfs/${course}.pdf`}
+      >
+        PDF
+      </a>
       <select
         className="top-navbar-course-selector"
         value={course}
@@ -33,7 +40,9 @@ const TopNavigator = ({ tab, setTab, course, courses, setCourse }) => {
         }}
       >
         {courses.map((course) => (
-          <option key={course} value={course}>{course}</option>
+          <option key={course} value={course}>
+            {course}
+          </option>
         ))}
       </select>
     </div>
