@@ -1,9 +1,9 @@
 import React from "react";
 import "./lesson-selector.css";
 import { connect } from "react-redux";
-import { setLessonAndTime } from "../redux/action";
+import { setLessonIndexAndTime } from "../redux/action";
 
-const LessonSelector = ({ timestamps, lesson, setLessonAndTime }) => {
+const LessonSelector = ({ lessons, lessonIndex, setLessonIndexAndTime }) => {
   return (
     <div
       id="lesson-selector"
@@ -11,18 +11,18 @@ const LessonSelector = ({ timestamps, lesson, setLessonAndTime }) => {
       className="cart-offcanvas offcanvas offcanvas-end show"
     >
       <div>Lessons</div>
-      {timestamps.map(({ time, part }, index) => (
+      {lessons.map(({ name, time }, index) => (
         <p
           key={`lesson-${index}`}
-          title={part}
-          className={lesson === index ? "selected" : ""}
+          title={name}
+          className={lessonIndex === index ? "selected" : ""}
           onClick={() => {
-            if (lesson !== index) {
-              setLessonAndTime(index, time);
+            if (lessonIndex !== index) {
+              setLessonIndexAndTime(index, time);
             }
           }}
         >
-          {part}
+          {name}
         </p>
       ))}
     </div>
@@ -30,12 +30,13 @@ const LessonSelector = ({ timestamps, lesson, setLessonAndTime }) => {
 };
 
 const mapStateToProps = (state) => ({
-  lesson: state.lesson,
-  timestamps: state.timestampsMap[state.course],
+  lessonIndex: state.lessonIndex,
+  lessons: state.coursesInfoMap[state.course],
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  setLessonAndTime: (lesson, time) => dispatch(setLessonAndTime(lesson, time)),
+  setLessonIndexAndTime: (lesson, time) =>
+    dispatch(setLessonIndexAndTime(lesson, time)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LessonSelector);

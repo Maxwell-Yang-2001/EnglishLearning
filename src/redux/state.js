@@ -1,9 +1,9 @@
-const timestampsMap = require("../data/timestamps.json");
+const coursesInfoMap = require("../data/coursesInfo.json");
 
 export const defaultState = {
   tab: 0,
-  course: Object.keys(timestampsMap)[0],
-  lesson: 0,
+  course: Object.keys(coursesInfoMap)[0],
+  lessonIndex: 0,
   time: 0,
-  timestampsMap,
+  coursesInfoMap,
 };

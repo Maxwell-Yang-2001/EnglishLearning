@@ -1,7 +1,7 @@
 import React from "react";
 import "./video-player.css";
 import { connect } from "react-redux";
-import { setTime, setLessonAndTime } from "../redux/action";
+import { setTime, setLessonIndexAndTime } from "../redux/action";
 
 class VideoPlayer extends React.Component {
   constructor(props) {
@@ -33,21 +33,21 @@ class VideoPlayer extends React.Component {
     this.interval = setInterval(() => {
       if (this.playerRef.current?.currentTime) {
         this.currentTime = this.playerRef.current.currentTime;
-        let lesson = this.props.lesson;
+        let lessonIndex = this.props.lessonIndex;
         while (
-          this.props.timestamps.length > lesson + 1 &&
-          this.props.timestamps[lesson + 1].time <= this.currentTime
+          this.props.timestamps.length > lessonIndex + 1 &&
+          this.props.timestamps[lessonIndex + 1].time <= this.currentTime
         ) {
-          lesson++;
+          lessonIndex++;
         }
         while (
-          lesson > 0 &&
-          this.props.timestamps[lesson].time > this.currentTime
+          lessonIndex > 0 &&
+          this.props.timestamps[lessonIndex].time > this.currentTime
         ) {
-          lesson--;
+          lessonIndex--;
         }
-        if (this.props.lesson !== lesson) {
-          this.props.setLessonAndTime(lesson, this.currentTime);
+        if (this.props.lessonIndex !== lessonIndex) {
+          this.props.setLessonIndexAndTime(lessonIndex, this.currentTime);
         }
       }
     }, 100);
@@ -87,14 +87,15 @@ class VideoPlayer extends React.Component {
 
 const mapStateToProps = (state) => ({
   time: state.time,
-  timestamps: state.timestampsMap[state.course],
-  lesson: state.lesson,
+  timestamps: state.coursesInfoMap[state.course],
+  lessonIndex: state.lessonIndex,
   course: state.course,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   setTime: (time) => dispatch(setTime(time)),
-  setLessonAndTime: (lesson, time) => dispatch(setLessonAndTime(lesson, time)),
+  setLessonIndexAndTime: (lessonIndex, time) =>
+    dispatch(setLessonIndexAndTime(lessonIndex, time)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(VideoPlayer);

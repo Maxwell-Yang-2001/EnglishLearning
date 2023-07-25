@@ -3,7 +3,14 @@ import "./top-navigator.css";
 import { connect } from "react-redux";
 import { setTab, setCourse } from "../redux/action";
 
-const TopNavigator = ({ tab, setTab, course, courses, setCourse }) => {
+const TopNavigator = ({
+  tab,
+  setTab,
+  course,
+  courses,
+  setCourse,
+  pageNumber,
+}) => {
   const tabTitles = ["Video", "Vocabulary", "Quiz"];
   return (
     <div className="top-navbar d-flex align-items-center">
@@ -25,7 +32,7 @@ const TopNavigator = ({ tab, setTab, course, courses, setCourse }) => {
         className="top-navbar-pdf"
         target="_blank"
         rel="noreferrer"
-        href={`./pdfs/${course}.pdf`}
+        href={`./pdfs/${course}.pdf${pageNumber ? `#page=${pageNumber}` : ""}`}
       >
         PDF
       </a>
@@ -52,7 +59,8 @@ const TopNavigator = ({ tab, setTab, course, courses, setCourse }) => {
 const mapStateToProps = (state) => ({
   tab: state.tab,
   course: state.course,
-  courses: Object.keys(state.timestampsMap),
+  courses: Object.keys(state.coursesInfoMap),
+  pageNumber: state.coursesInfoMap[state.course][state.lessonIndex].pageNumber,
 });
 
 const mapDispatchToProps = (dispatch) => ({

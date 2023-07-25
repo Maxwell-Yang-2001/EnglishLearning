@@ -26,14 +26,15 @@ def str_to_seconds(label: str) -> int:
         ftr = [86400, 3600, 60, 1]
     return sum([a*b for a,b in zip(ftr, map(int, label.split(':')))])
 
-raw_timestamps_dir = "raw_timestamps"
-entries = os.listdir(raw_timestamps_dir)
+# load in the timestamps
+directory = "timestamps"
+entries = os.listdir(directory)
 
-timestamps_map = dict()
+courses_info_map = dict()
 
 for entry in entries:
-    raw_file = open(os.path.join(raw_timestamps_dir, entry), "r")
-    timestamps = []
+    raw_file = open(os.path.join(directory, entry), "r")
+    lessons_info_list = []
 
     for row in raw_file:
         row = row.strip()
@@ -42,15 +43,28 @@ for entry in entries:
         if row.find(' ') == -1:
             raise ValueError("A timestamp row does not contain a space: {}".format(row))
         parts = row.split(" ", 1)
-        timestamp = dict()
-        timestamp["time"] = str_to_seconds(parts[0].strip())
-        timestamp["part"] =  parts[1].strip()
-        timestamps.append(timestamp)
+        lesson_info = dict()
+        lesson_info["name"] = parts[1].strip()
+        lesson_info["time"] = str_to_seconds(parts[0].strip())
+        lessons_info_list.append(lesson_info)
 
     raw_file.close()
-    timestamps_map[entry[:entry.rfind(".")]] = timestamps
+    courses_info_map[entry[:entry.rfind(".")]] = lessons_info_list
 
-processed_file = open(os.path.join("..", "..", "src", "data", "timestamps.json"), "w")
-json.dump(timestamps_map, processed_file, ensure_ascii=False, indent=4)
+# load in the pages (if provided)
+directory = "pages"
+if (os.path.isdir(directory) and len(os.listdir(directory)) > 0):
+    entries = os.listdir(directory)
+
+    for entry in entries:
+        lessons_info_list = courses_info_map[entry[:entry.rfind(".")]]
+        raw_file = open(os.path.join(directory, entry), "r")
+
+        for i, row in enumerate(raw_file):
+            lessons_info_list[i]["pageNumber"] = int(row.strip())
+    raw_file.close()
+
+processed_file = open(os.path.join("..", "src", "data", "coursesInfo.json"), "w")
+json.dump(courses_info_map, processed_file, ensure_ascii=False, indent=4)
 
 processed_file.close()

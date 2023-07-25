@@ -7,21 +7,21 @@ export const setTab = (tab) => (dispatch) => {
   });
 };
 
-export const setLessonAndTime = (lesson, time) => (dispatch) => {
+export const setLessonIndexAndTime = (lessonIndex, time) => (dispatch) => {
   dispatch({
-    type: "SET_LESSON_AND_TIME",
+    type: "SET_LESSON_INDEX_AND_TIME",
     payload: {
-      lesson,
+      lessonIndex,
       time,
     },
   });
 };
 
-export const setLesson = (lesson) => (dispatch) => {
+export const setLessonIndex = (lessonIndex) => (dispatch) => {
   dispatch({
-    type: "SET_LESSON",
+    type: "SET_LESSON_INDEX",
     payload: {
-      lesson,
+      lessonIndex,
     },
   });
 };
