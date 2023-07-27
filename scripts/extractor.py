@@ -57,12 +57,66 @@ if (os.path.isdir(directory) and len(os.listdir(directory)) > 0):
     entries = os.listdir(directory)
 
     for entry in entries:
-        lessons_info_list = courses_info_map[entry[:entry.rfind(".")]]
         raw_file = open(os.path.join(directory, entry), "r")
+        lessons_info_list = courses_info_map[entry[:entry.rfind(".")]]
 
         for i, row in enumerate(raw_file):
             lessons_info_list[i]["pageNumber"] = int(row.strip())
     raw_file.close()
+
+# load in vocabulary (if provided)
+directory = "vocabulary"
+if (os.path.isdir(directory) and len(os.listdir(directory)) > 0):
+    entries = os.listdir(directory)
+
+    for entry in entries:
+        raw_file = open(os.path.join(directory, entry), "r")
+        lessons_info_list = courses_info_map[entry[:entry.rfind(".")]]
+
+        lesson_vocab_list = []
+        lesson_index = 0
+
+        for row in raw_file:
+            row = row.strip()
+            if len(row) == 0:
+                if len(lesson_vocab_list) > 0:
+                    
+                    lessons_info_list[lesson_index]["vocabulary"] = lesson_vocab_list
+                    lesson_vocab_list = []
+                    lesson_index += 1
+                continue
+
+            parts = row.split("#")
+            if len(parts) % 2 == 0 or len(parts) < 3:
+                raise ValueError("A vocabulary row does not contain odd number (at least 3) of parts separated by #: {}".format(row))
+            
+            entry = dict()
+            entry["word"] = parts[0].strip()
+            entry["meanings"] = []
+
+            for i in range(len(parts) // 2):
+                meaning = dict()
+                meaning_type = parts[2 * i + 1].strip()
+                if meaning_type.find(",") == -1:
+                    meaning["type"] = meaning_type
+                else:
+                    type_parts = meaning_type.split(",")
+                    if len(type_parts) != 5 or type_parts[0].strip() != 'v.':
+                        raise ValueError("A vocabulary row does not contain exactly 5 forms (default, third person, present participle, past, past participle) for a verb: {}".format(row))
+                    meaning["type"] = type_parts[0].strip()
+                    meaning["thirdPerson"] = type_parts[1].strip()
+                    meaning["presentParticiple"] = type_parts[2].strip()
+                    meaning["past"] = type_parts[3].strip()
+                    meaning["pastParticiple"] = type_parts[4].strip()
+                
+                meaning["meaning"] = parts[2 * i + 2].strip()
+                
+                entry["meanings"].append(meaning)
+            
+            lesson_vocab_list.append(entry)
+
+        if len(lesson_vocab_list) > 0:
+            lessons_info_list[lesson_index]["vocabulary"] = lesson_vocab_list
 
 processed_file = open(os.path.join("..", "src", "data", "coursesInfo.json"), "w")
 json.dump(courses_info_map, processed_file, ensure_ascii=False, indent=4)

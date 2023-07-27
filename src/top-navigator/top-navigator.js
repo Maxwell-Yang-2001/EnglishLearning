@@ -20,7 +20,6 @@ const TopNavigator = ({
           className={`top-navbar-tab${index === tab ? " selected" : ""}`}
           onClick={() => {
             if (index !== tab) {
-              console.log(index);
               setTab(index);
             }
           }}
