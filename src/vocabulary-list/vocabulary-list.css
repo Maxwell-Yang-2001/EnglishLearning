@@ -1,0 +1,47 @@
+.vocabulary-tiles-container {
+  width: calc(100% - 305px);
+  height: calc(100vh - 50px);
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  position: absolute;
+  top: 50px;
+  font-size: 20px;
+}
+
+.vocabulary-tile {
+  display: block;
+  padding: 20px;
+  width: calc(100% - 400px);
+  margin: 0 200px;
+  overflow: hidden;
+}
+
+.vocabulary-tile:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.vocabulary-tile-word {
+  font-size: 30px;
+}
+
+.vocabulary-tile-word:hover, .vocabulary-tile-verb-form:hover {
+  cursor: pointer;
+  text-shadow: 0 0 1px black;
+  text-decoration: underline;
+}
+
+.vocabulary-tile-type {
+  font-size: 20px;
+  font-style: italic;
+  margin-right: 20px;
+}
+
+.vocabulary-tile-meaning:not(:last-child) {
+  margin-right: 20px;
+}
+
+.vocabulary-tile-verb-form-connector {
+  color: grey;
+  font-style: italic;
+}

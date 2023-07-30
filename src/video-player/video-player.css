@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .video-player {
   width: calc(min(100vw - 400px, (100vh - 100px) * 16 / 9));
   border-radius: 10px;

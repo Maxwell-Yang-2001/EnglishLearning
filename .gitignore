@@ -24,3 +24,6 @@ yarn-error.log*
 
 public/videos
 public/pdfs
+
+public/audio/*
+!public/audio/sorry-message.mp3

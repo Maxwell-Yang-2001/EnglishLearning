@@ -10,6 +10,10 @@
                     "meanings": [
                         {
                             "type": "v.",
+                            "thirdPerson": "excuses",
+                            "presentParticiple": "excusing",
+                            "past": "excused",
+                            "pastParticiple": "excused",
                             "meaning": "原谅"
                         }
                     ]
@@ -90,7 +94,7 @@
                     "word": "thank you",
                     "meanings": [
                         {
-                            "type": "-",
+                            "type": "",
                             "meaning": "感谢你（们）"
                         }
                     ]
@@ -99,7 +103,7 @@
                     "word": "very much",
                     "meanings": [
                         {
-                            "type": "-",
+                            "type": "",
                             "meaning": "非常地"
                         }
                     ]

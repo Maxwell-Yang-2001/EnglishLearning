@@ -8,10 +8,14 @@ class VideoPlayer extends React.Component {
     super(props);
     this.currentTime = props.time;
     this.playerRef = React.createRef();
+    this.savedTime = props.time;
   }
 
   componentDidMount() {
     // relative seek +/- 10s and pause/play
+    if (this.playRef?.current) {
+      this.playerRef.current.currentTime = this.currentTime;
+    }
     this.handler = (e) => {
       if (e.key === "ArrowLeft") {
         if (this.playerRef.current?.currentTime) {
@@ -31,6 +35,9 @@ class VideoPlayer extends React.Component {
     // HACK: every 100 ms (assumed to be fast enough for spamming left or right)
     // get the current time of the player so relative seeks can be calculated
     this.interval = setInterval(() => {
+      if (this.playerRef.current?.paused) {
+        return;
+      }
       if (this.playerRef.current?.currentTime) {
         this.currentTime = this.playerRef.current.currentTime;
         let lessonIndex = this.props.lessonIndex;
@@ -74,11 +81,13 @@ class VideoPlayer extends React.Component {
   render() {
     return (
       <div className="video-container d-flex align-items-center">
-        <video className="video-player" controls ref={this.playerRef} autoFocus>
-          <source
-            src={`videos/${this.props.course}.mp4#t=${this.props.time}`}
-            type="video/mp4"
-          />
+        <video
+          className="video-player"
+          controls
+          ref={this.playerRef}
+          autoFocus
+          src={`videos/${this.props.course}.mp4#t=${this.savedTime}`}
+        >
         </video>
       </div>
     );

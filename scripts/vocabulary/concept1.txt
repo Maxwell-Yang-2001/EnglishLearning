@@ -1,4 +1,4 @@
-excuse#v.#原谅
+excuse#v.,excuses,excusing,excused,excused#原谅
 me#pron.#我(宾格)
 yes#adv.#是的
 is#v.#be动词现在时第三人称单数
@@ -7,8 +7,8 @@ your#possessive adjective#你的，你们的
 handbag#n.#（女用）手提包
 pardon#int.#原谅，请再说一遍
 it#pron.#它
-thank you#-#感谢你（们）
-very much#-#非常地
+thank you##感谢你（们）
+very much##非常地
 
 pen#n.#钢笔
 pencil#n.#铅笔
@@ -46,7 +46,7 @@ student#n.#学生
 French#adj.#法国的#n.#法国人，法语
 German#adj.#德国的#n.#德国人，德语
 nice#adj.#美好的
-meet#v.#遇见
+meet#v.,meets,meeting,met,met#遇见
 Japanese#adj.#日本的#n.#日本人，日语
 Korean#adj.#韩国的#n.#韩国人，韩语
 Chinese#adj.#中国的#n.#中国人，汉语
@@ -95,7 +95,7 @@ well#adj.#身体好
 fine#adj.#美好的
 thanks#int.#谢谢
 goodbye#int.#再见
-see#v.#见
+see#v.,sees,seeing,saw,seen#见
 
 fat#adj.#胖的
 woman#n.#女人
