@@ -35,6 +35,15 @@ export const setTime = (time) => (dispatch) => {
   });
 };
 
+export const setVocabularyPlaybackRate = (vocabularyPlaybackRate) => (dispatch) => {
+  dispatch({
+    type: "SET_VOCABULARY_PLAYBACK_RATE",
+    payload: {
+      vocabularyPlaybackRate,
+    },
+  });
+};
+
 export const setCourse = (course) => (dispatch) => {
   dispatch({
     type: "SET_COURSE",

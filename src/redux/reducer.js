@@ -6,6 +6,7 @@ export default function reducer(state = defaultState, action) {
     case "SET_LESSON_INDEX":
     case "SET_TIME":
     case "SET_LESSON_INDEX_AND_TIME":
+    case "SET_VOCABULARY_PLAYBACK_RATE":
       return {
         ...state,
         ...action.payload,

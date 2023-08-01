@@ -945,7 +945,7 @@ amused#adj.#有趣的🤣
 smile#v.,smiles,smiling,smiled,smiled#微笑😊
 embarrassed#adj.#尴尬的，窘迫的😳
 worried#adj.#担心，担忧😓
-reguarly#adv.#经常地，定期地📅
+regularly#adv.#经常地，定期地📅
 
 surround#v.,surrounds,surrounding,surrounded,surrounded#包围
 wood#n.#树林

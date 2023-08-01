@@ -45,3 +45,16 @@
   color: grey;
   font-style: italic;
 }
+
+.vocabulary-playback-speed-slider {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  text-align: center;
+  width: 50px;
+}
+
+.vocabulary-playback-speed-slider > span {
+  position: relative;
+  height: 200px;
+}
