@@ -1,11 +1,14 @@
-import React from "react";
-import "./quiz-page.css";
+import React, { useState } from "react";
 import LessonSelector from "../../lesson-selector/lesson-selector";
 import Quiz from "../../quiz/quiz";
+import QuizConfiguration from "../../quiz/quiz-configuration";
 
-export const QuizPage = () => (
-  <>
-    <Quiz />
-    <LessonSelector />
-  </>
-);
+export const QuizPage = () => {
+  const [prepared, setPrepared] = useState(false);
+  return (
+    <>
+      {prepared ? <Quiz /> : <QuizConfiguration setPrepared={setPrepared} />}
+      <LessonSelector />
+    </>
+  );
+};
