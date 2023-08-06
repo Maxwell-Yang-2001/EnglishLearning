@@ -39,7 +39,30 @@
   background-color: gainsboro;
 }
 
-#lesson-selector > p:hover {
+#lesson-selector > p:not(.quiz-lesson-tile.selected):hover {
   background-color: lightgrey;
   cursor: pointer;
+}
+
+#lesson-selector > p.quiz-lesson-tile.selected:hover {
+  cursor: pointer;
+  background-color: #EEEEEE;
+}
+
+.clear-button, .select-button {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: transform .3s ease-in-out;
+}
+
+.select-button {
+  right: 50px;
+}
+
+.clear-button:hover,.select-button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }

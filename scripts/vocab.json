@@ -1,0 +1,993 @@
+[
+    [
+        {
+            "word": "excuse",
+            "meanings": [
+                {
+                    "type": "v.",
+                    "thirdPerson": "excuses",
+                    "presentParticiple": "excusing",
+                    "past": "excused",
+                    "pastParticiple": "excused",
+                    "meaning": "原谅"
+                }
+            ]
+        },
+        {
+            "word": "me",
+            "meanings": [
+                {
+                    "type": "pron.",
+                    "meaning": "我(宾格)"
+                }
+            ]
+        },
+        {
+            "word": "yes",
+            "meanings": [
+                {
+                    "type": "adv.",
+                    "meaning": "是的"
+                }
+            ]
+        },
+        {
+            "word": "is",
+            "meanings": [
+                {
+                    "type": "v.",
+                    "meaning": "be动词现在时第三人称单数"
+                }
+            ]
+        },
+        {
+            "word": "this",
+            "meanings": [
+                {
+                    "type": "pron.",
+                    "meaning": "这"
+                }
+            ]
+        },
+        {
+            "word": "your",
+            "meanings": [
+                {
+                    "type": "possessive adjective",
+                    "meaning": "你的，你们的"
+                }
+            ]
+        },
+        {
+            "word": "handbag",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "（女用）手提包"
+                }
+            ]
+        },
+        {
+            "word": "pardon",
+            "meanings": [
+                {
+                    "type": "int.",
+                    "meaning": "原谅，请再说一遍"
+                }
+            ]
+        },
+        {
+            "word": "it",
+            "meanings": [
+                {
+                    "type": "pron.",
+                    "meaning": "它"
+                }
+            ]
+        },
+        {
+            "word": "thank you",
+            "meanings": [
+                {
+                    "type": "",
+                    "meaning": "感谢你（们）"
+                }
+            ]
+        },
+        {
+            "word": "very much",
+            "meanings": [
+                {
+                    "type": "",
+                    "meaning": "非常地"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "word": "pen",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "钢笔"
+                }
+            ]
+        },
+        {
+            "word": "pencil",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "铅笔"
+                }
+            ]
+        },
+        {
+            "word": "book",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "书"
+                }
+            ]
+        },
+        {
+            "word": "watch",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "手表"
+                }
+            ]
+        },
+        {
+            "word": "coat",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "上衣，外衣"
+                }
+            ]
+        },
+        {
+            "word": "dress",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "连衣裙"
+                }
+            ]
+        },
+        {
+            "word": "skirt",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "裙子"
+                }
+            ]
+        },
+        {
+            "word": "shirt",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "衬衣"
+                }
+            ]
+        },
+        {
+            "word": "car",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "小汽车"
+                }
+            ]
+        },
+        {
+            "word": "house",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "房子"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "word": "umbrella",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "伞"
+                }
+            ]
+        },
+        {
+            "word": "please",
+            "meanings": [
+                {
+                    "type": "int.",
+                    "meaning": "请"
+                }
+            ]
+        },
+        {
+            "word": "here",
+            "meanings": [
+                {
+                    "type": "adv.",
+                    "meaning": "这里"
+                }
+            ]
+        },
+        {
+            "word": "my",
+            "meanings": [
+                {
+                    "type": "possessive adjective",
+                    "meaning": "我的"
+                }
+            ]
+        },
+        {
+            "word": "ticket",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "票"
+                }
+            ]
+        },
+        {
+            "word": "number",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "号码"
+                }
+            ]
+        },
+        {
+            "word": "five",
+            "meanings": [
+                {
+                    "type": "num.",
+                    "meaning": "五"
+                }
+            ]
+        },
+        {
+            "word": "sorry",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "对不起的"
+                }
+            ]
+        },
+        {
+            "word": "sir",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "先生"
+                }
+            ]
+        },
+        {
+            "word": "cloakroom",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "衣帽存放处"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "word": "suit",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "一套衣服"
+                }
+            ]
+        },
+        {
+            "word": "school",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "学校"
+                }
+            ]
+        },
+        {
+            "word": "teacher",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "老师"
+                }
+            ]
+        },
+        {
+            "word": "son",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "儿子"
+                }
+            ]
+        },
+        {
+            "word": "daughter",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "女儿"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "word": "Mr.",
+            "meanings": [
+                {
+                    "type": "",
+                    "meaning": "先生"
+                }
+            ]
+        },
+        {
+            "word": "good",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "好"
+                }
+            ]
+        },
+        {
+            "word": "Miss",
+            "meanings": [
+                {
+                    "type": "",
+                    "meaning": "小姐"
+                }
+            ]
+        },
+        {
+            "word": "new",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "新的"
+                }
+            ]
+        },
+        {
+            "word": "student",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "学生"
+                }
+            ]
+        },
+        {
+            "word": "French",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "法国的"
+                },
+                {
+                    "type": "n.",
+                    "meaning": "法国人，法语"
+                }
+            ]
+        },
+        {
+            "word": "German",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "德国的"
+                },
+                {
+                    "type": "n.",
+                    "meaning": "德国人，德语"
+                }
+            ]
+        },
+        {
+            "word": "nice",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "美好的"
+                }
+            ]
+        },
+        {
+            "word": "meet",
+            "meanings": [
+                {
+                    "type": "v.",
+                    "meaning": "遇见"
+                }
+            ]
+        },
+        {
+            "word": "Japanese",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "日本的"
+                },
+                {
+                    "type": "n.",
+                    "meaning": "日本人，日语"
+                }
+            ]
+        },
+        {
+            "word": "Korean",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "韩国的"
+                },
+                {
+                    "type": "n.",
+                    "meaning": "韩国人，韩语"
+                }
+            ]
+        },
+        {
+            "word": "Chinese",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "中国的"
+                },
+                {
+                    "type": "n.",
+                    "meaning": "中国人，汉语"
+                }
+            ]
+        },
+        {
+            "word": "too",
+            "meanings": [
+                {
+                    "type": "adv.",
+                    "meaning": "也"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "word": "make",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "（产品的）牌号"
+                }
+            ]
+        },
+        {
+            "word": "Swedish",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "瑞典的"
+                },
+                {
+                    "type": "n.",
+                    "meaning": "瑞典人，瑞典语"
+                }
+            ]
+        },
+        {
+            "word": "English",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "英国的"
+                },
+                {
+                    "type": "n.",
+                    "meaning": "英国人，英语"
+                }
+            ]
+        },
+        {
+            "word": "American",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "美国的"
+                },
+                {
+                    "type": "n.",
+                    "meaning": "美国人"
+                }
+            ]
+        },
+        {
+            "word": "Italian",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "意大利的"
+                },
+                {
+                    "type": "n.",
+                    "meaning": "意大利人"
+                }
+            ]
+        },
+        {
+            "word": "Volvo",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "沃尔沃"
+                }
+            ]
+        },
+        {
+            "word": "Peugeot",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "标致"
+                }
+            ]
+        },
+        {
+            "word": "Mercedes",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "梅赛德斯"
+                }
+            ]
+        },
+        {
+            "word": "Toyota",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "丰田"
+                }
+            ]
+        },
+        {
+            "word": "Daewoo",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "大宇"
+                }
+            ]
+        },
+        {
+            "word": "Mini",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "迷你"
+                }
+            ]
+        },
+        {
+            "word": "Ford",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "福特"
+                }
+            ]
+        },
+        {
+            "word": "Fiat",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "菲亚特"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "word": "I",
+            "meanings": [
+                {
+                    "type": "pron.",
+                    "meaning": "我"
+                }
+            ]
+        },
+        {
+            "word": "am",
+            "meanings": [
+                {
+                    "type": "v.",
+                    "meaning": "be动词现在时第一人称单数"
+                }
+            ]
+        },
+        {
+            "word": "are",
+            "meanings": [
+                {
+                    "type": "v.",
+                    "meaning": "be动词现在时复数"
+                }
+            ]
+        },
+        {
+            "word": "name",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "名字"
+                }
+            ]
+        },
+        {
+            "word": "what",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "什么"
+                },
+                {
+                    "type": "pron.",
+                    "meaning": "什么"
+                }
+            ]
+        },
+        {
+            "word": "nationality",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "国籍"
+                }
+            ]
+        },
+        {
+            "word": "job",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "工作"
+                }
+            ]
+        },
+        {
+            "word": "keyboard",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "电脑键盘"
+                }
+            ]
+        },
+        {
+            "word": "operator",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "操作人员"
+                }
+            ]
+        },
+        {
+            "word": "engineer",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "工程师"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "word": "policeman",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "警察"
+                }
+            ]
+        },
+        {
+            "word": "policewoman",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "女警察"
+                }
+            ]
+        },
+        {
+            "word": "taxi driver",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "出租汽车司机"
+                }
+            ]
+        },
+        {
+            "word": "air hostess",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "空中小姐"
+                }
+            ]
+        },
+        {
+            "word": "postman",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "邮递员"
+                }
+            ]
+        },
+        {
+            "word": "nurse",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "护士"
+                }
+            ]
+        },
+        {
+            "word": "mechanic",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "机械师"
+                }
+            ]
+        },
+        {
+            "word": "hairdresser",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "理发师"
+                }
+            ]
+        },
+        {
+            "word": "housewife",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "家庭妇女"
+                }
+            ]
+        },
+        {
+            "word": "milkman",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "送牛奶的人"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "word": "hello",
+            "meanings": [
+                {
+                    "type": "int.",
+                    "meaning": "喂（表示问候）"
+                }
+            ]
+        },
+        {
+            "word": "hi",
+            "meanings": [
+                {
+                    "type": "int.",
+                    "meaning": "喂，嗨"
+                }
+            ]
+        },
+        {
+            "word": "today",
+            "meanings": [
+                {
+                    "type": "adv.",
+                    "meaning": "今天"
+                }
+            ]
+        },
+        {
+            "word": "well",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "身体好"
+                }
+            ]
+        },
+        {
+            "word": "fine",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "美好的"
+                }
+            ]
+        },
+        {
+            "word": "thanks",
+            "meanings": [
+                {
+                    "type": "int.",
+                    "meaning": "谢谢"
+                }
+            ]
+        },
+        {
+            "word": "goodbye",
+            "meanings": [
+                {
+                    "type": "int.",
+                    "meaning": "再见"
+                }
+            ]
+        },
+        {
+            "word": "see",
+            "meanings": [
+                {
+                    "type": "v.",
+                    "meaning": "见"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "word": "fat",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "胖的"
+                }
+            ]
+        },
+        {
+            "word": "woman",
+            "meanings": [
+                {
+                    "type": "n.",
+                    "meaning": "女人"
+                }
+            ]
+        },
+        {
+            "word": "thin",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "瘦的"
+                }
+            ]
+        },
+        {
+            "word": "tall",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "高的"
+                }
+            ]
+        },
+        {
+            "word": "short",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "矮的"
+                }
+            ]
+        },
+        {
+            "word": "dirty",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "脏的"
+                }
+            ]
+        },
+        {
+            "word": "clean",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "干净的"
+                }
+            ]
+        },
+        {
+            "word": "hot",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "热的"
+                }
+            ]
+        },
+        {
+            "word": "cold",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "冷的"
+                }
+            ]
+        },
+        {
+            "word": "old",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "老的"
+                }
+            ]
+        },
+        {
+            "word": "young",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "年轻的"
+                }
+            ]
+        },
+        {
+            "word": "busy",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "忙的"
+                }
+            ]
+        },
+        {
+            "word": "lazy",
+            "meanings": [
+                {
+                    "type": "adj.",
+                    "meaning": "懒的"
+                }
+            ]
+        }
+    ]
+]

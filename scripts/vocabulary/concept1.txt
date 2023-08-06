@@ -697,6 +697,7 @@ neighbor#n.#邻居
 person#n.#人
 people#n.#人们
 poor#adj.#可怜的🥺
+regard#n.#问候，一般复数使用🙋‍♂️
 
 pilot#n.#飞行员👨‍✈️
 return#v.,returns,returning,returned,returned#返回
