@@ -89,12 +89,3 @@ export const setQuizStartWithTranslation = (quizStartWithTranslation) => (dispat
     }
   })
 }
-
-export const setQuizAutomaticCheck = (quizAutomaticCheck) => (dispatch) => {
-  dispatch({
-    type: "SET_QUIZ_AUTOMATIC_CHECK",
-    payload: {
-      quizAutomaticCheck
-    }
-  })
-}

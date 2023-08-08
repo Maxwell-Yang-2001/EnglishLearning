@@ -69,14 +69,6 @@ export default function reducer(state = defaultState, action) {
           startWithTranslation: action.payload.quizStartWithTranslation,
         },
       };
-    case "SET_QUIZ_AUTOMATIC_CHECK":
-      return {
-        ...state,
-        quiz: {
-          ...state.quiz,
-          automaticCheck: action.payload.quizAutomaticCheck,
-        },
-      };
     default:
       return state;
   }

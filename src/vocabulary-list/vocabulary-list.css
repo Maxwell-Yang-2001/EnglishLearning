@@ -47,9 +47,9 @@
 }
 
 .vocabulary-playback-speed-slider {
-  position: absolute;
+  position: fixed;
   left: 10px;
-  top: 20px;
+  top: 70px;
   text-align: center;
   width: 50px;
 }
@@ -57,4 +57,10 @@
 .vocabulary-playback-speed-slider > span {
   position: relative;
   height: 200px;
+}
+
+.vocabulary-list-group-title {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 700;
 }

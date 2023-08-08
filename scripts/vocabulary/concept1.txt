@@ -106,8 +106,8 @@ young#adj.#年轻的
 busy#adj.#忙的
 lazy#adj.#懒的
 
-whose#pron.#谁的🟦
-blue#adj.#蓝色的
+whose#pron.#谁的
+blue#adj.#蓝色的🟦
 perhaps#adv.#大概
 white#adj.#白色的⬜️
 catch#v.,catches,catching,caught,caught#抓住

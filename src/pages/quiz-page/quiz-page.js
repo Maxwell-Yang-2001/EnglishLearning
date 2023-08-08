@@ -8,7 +8,7 @@ export const QuizPage = () => {
   return (
     <>
       {prepared ? <Quiz /> : <QuizConfiguration setPrepared={setPrepared} />}
-      <LessonSelector />
+      <LessonSelector quizPrepared={prepared} />
     </>
   );
 };

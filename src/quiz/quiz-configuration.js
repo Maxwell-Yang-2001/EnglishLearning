@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Form, Dropdown, ButtonGroup, Button } from "react-bootstrap";
-import {
-  setQuizStartWithTranslation,
-  setQuizAutomaticCheck,
-} from "../redux/action";
+import { setQuizStartWithTranslation } from "../redux/action";
 
 const QuizConfiguration = ({
   vocabularyCount,
   quizStartWithTranslation,
   setQuizStartWithTranslation,
-  quizAutomaticCheck,
-  setQuizAutomaticCheck,
   setPrepared,
 }) => {
   // -2: not counting down; -1: state to transition to quiz; 0: Go!; 1-3: seconds remaining
@@ -21,7 +16,7 @@ const QuizConfiguration = ({
     if (countdownSecond === -1) {
       setPrepared(true);
     }
-  }, [countdownSecond]);
+  }, [countdownSecond, setPrepared]);
 
   if (vocabularyCount === 0) {
     return (
@@ -106,24 +101,7 @@ const QuizConfiguration = ({
                 <Form.Label>Check Mode:</Form.Label>
               </td>
               <td>
-                <Dropdown as={ButtonGroup} className="quiz-dropdown">
-                  <Button variant="light">
-                    {quizAutomaticCheck ? "By System" : "Manual"}
-                  </Button>
-                  <Dropdown.Toggle
-                    split
-                    variant="light"
-                    id="dropdown-split-basic"
-                  />
-                  <Dropdown.Menu>
-                    <Dropdown.Item onClick={() => setQuizAutomaticCheck(true)}>
-                      By System
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={() => setQuizAutomaticCheck(false)}>
-                      Manual
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
+                <Button variant="light">{"By System"}</Button>
               </td>
             </tr>
           </tbody>
@@ -164,15 +142,12 @@ const mapStateToProps = (state) => {
     ),
     lessons: state.coursesInfoMap[state.course],
     quizStartWithTranslation: state.quiz.startWithTranslation,
-    quizAutomaticCheck: state.quiz.automaticCheck,
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
   setQuizStartWithTranslation: (quizStartWithTranslation) =>
     dispatch(setQuizStartWithTranslation(quizStartWithTranslation)),
-  setQuizAutomaticCheck: (quizAutomaticCheck) =>
-    dispatch(setQuizAutomaticCheck(quizAutomaticCheck)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuizConfiguration);

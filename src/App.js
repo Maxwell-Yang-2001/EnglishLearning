@@ -1,7 +1,7 @@
 import "./App.css";
 import { QuizPage } from "./pages/quiz-page/quiz-page";
 import { VideoPage } from "./pages/video-page/video-page";
-import { VocabularyPage } from "./pages/vocabulary-page/vocabulary-page";
+import VocabularyPage from "./pages/vocabulary-page/vocabulary-page";
 import TopNavigator from "./top-navigator/top-navigator";
 import { connect } from "react-redux";
 

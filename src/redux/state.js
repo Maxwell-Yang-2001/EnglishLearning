@@ -10,7 +10,6 @@ export const defaultState = {
   coursesInfoMap,
   quiz: {
     lessonIndices: Array(coursesInfoMap[defaultCourse].length).fill(false),
-    startWithTranslation: true,
-    automaticCheck: true,
+    startWithTranslation: true
   },
 };

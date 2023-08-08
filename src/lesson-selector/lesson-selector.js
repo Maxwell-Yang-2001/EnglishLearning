@@ -45,6 +45,7 @@ const LessonSelector = ({
   toggleQuizLessonIndex,
   clearQuizLessonIndices,
   fillQuizLessonIndexRange,
+  quizPrepared,
 }) => {
   // selectIndex: -2 not in select mode; -1 in select mode; 0+ in select mode with selection
   const [selectIndex, setSelectIndex] = useState(-2);
@@ -56,12 +57,15 @@ const LessonSelector = ({
     >
       <div>
         Lessons
-        {isQuiz && selectIndex === -2 && (
+        {isQuiz && !quizPrepared && selectIndex === -2 && (
           <SelectBox selectOn={() => setSelectIndex(-1)} />
         )}
-        {isQuiz && selectIndex === -2 && quizLessonIndices.indexOf(true) !== -1 && (
-          <XCircle clearQuizLessonIndices={clearQuizLessonIndices} />
-        )}
+        {isQuiz &&
+          !quizPrepared &&
+          selectIndex === -2 &&
+          quizLessonIndices.indexOf(true) !== -1 && (
+            <XCircle clearQuizLessonIndices={clearQuizLessonIndices} />
+          )}
       </div>
       {lessons.map(({ name, time }, index) => (
         <p
@@ -69,13 +73,20 @@ const LessonSelector = ({
           title={name}
           className={
             isQuiz
-              ? `quiz-lesson-tile${quizLessonIndices[index] || index === selectIndex ? " selected" : ""}`
+              ? `${quizPrepared ? "" : "quiz-lesson-tile"} ${
+                  quizLessonIndices[index] || index === selectIndex
+                    ? "selected"
+                    : ""
+                }`
               : lessonIndex === index
               ? "selected"
               : ""
           }
           onClick={() => {
             if (isQuiz) {
+              if (quizPrepared) {
+                return;
+              }
               if (selectIndex === -2) {
                 // not in select mode - regular toggle
                 toggleQuizLessonIndex(index);
@@ -84,7 +95,10 @@ const LessonSelector = ({
                 setSelectIndex(index);
               } else {
                 // in select mode with existing index - fill the range and clear select index
-                fillQuizLessonIndexRange(Math.min(index, selectIndex), Math.max(index, selectIndex));
+                fillQuizLessonIndexRange(
+                  Math.min(index, selectIndex),
+                  Math.max(index, selectIndex)
+                );
                 setSelectIndex(-2);
               }
             } else {
