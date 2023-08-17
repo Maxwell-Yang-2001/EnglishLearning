@@ -7,7 +7,7 @@ export const QuizPage = () => {
   const [prepared, setPrepared] = useState(false);
   return (
     <>
-      {prepared ? <Quiz /> : <QuizConfiguration setPrepared={setPrepared} />}
+      {prepared ? <Quiz setPrepared={setPrepared} /> : <QuizConfiguration setPrepared={setPrepared} />}
       <LessonSelector quizPrepared={prepared} />
     </>
   );

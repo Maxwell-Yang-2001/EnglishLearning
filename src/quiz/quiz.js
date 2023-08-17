@@ -22,15 +22,20 @@ const shuffle = (inputArray) => {
 
 let quizOrder;
 
-const Quiz = ({ vocabulary, quizStartWithTranslation }) => {
-  if (!quizOrder) {
-    quizOrder = shuffle(vocabulary);
-  }
+const Quiz = ({ vocabulary, quizStartWithTranslation, setPrepared }) => {
+  quizOrder = vocabulary;
 
   const [index, setIndex] = useState(0);
   const [incorrectEntries, setIncorrectEntries] = useState([]);
   const [skipEntries, setSkipEntries] = useState([]);
   const [hintNumber, setHintNumber] = useState(0);
+  const [shuffled, setShuffled] = useState(false);
+
+  useEffect(() => {
+    if (!shuffled) {
+      quizOrder = shuffle(vocabulary);
+    }
+  }, [shuffled, vocabulary]);
 
   return index < (quizOrder?.length ?? 0) ? (
     <div className="quiz-question-container">
@@ -88,6 +93,16 @@ const Quiz = ({ vocabulary, quizStartWithTranslation }) => {
             <b>{(hintNumber / quizOrder.length).toFixed(2)}</b> hint(s) per
             question.
           </p>
+          <Button
+            size="lg"
+            variant="info"
+            onClick={() => {
+              setPrepared(false);
+              setShuffled(false);
+            }}
+          >
+            Go Back
+          </Button>
         </div>,
         incorrectEntries.length > 0 && (
           <p className="vocabulary-list-group-title">Incorrect Entries</p>
